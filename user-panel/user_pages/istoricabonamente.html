@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Sidebar Example</title>
+    <link rel="stylesheet" href="/css_5_user_panel/style_aside_bar.css">
+    <link rel="stylesheet" href="/css_5_user_panel/user_panel_background.css">
+
+</head>
+<body>
+    <aside class="sidebar" id="sidebar">
+        <a href="/user-panel/user_pages/abonamenteactive.html" class="sidebar-btn">Abonamente active</a>
+        <a href="/user-panel/user_pages/istoricabonamente.html" class="sidebar-btn">Istoric</a>
+        <a href="/user-panel/user_pages/setariclienti.html" class="sidebar-btn">Setari</a>
+        <button class="close-btn" id="hide-btn">Hide Sidebar</button>
+    </aside>
+    <button class="show-btn" id="show-btn">Show Sidebar</button>
+    <main class="content">
+        <!-- Main content goes here -->
+        <p>Welcome to the main content area!</p>
+        <section id="expired-subscriptions">
+            <h2>Expired Subscriptions</h2>
+            <table id="expired-table">
+                <thead>
+                    <tr>
+                        <th>Subscription</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Expired subscriptions will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="/script_java_user_panel/aside_hide_show.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css_/style_default.css">
+    <link rel="stylesheet" href="/css_/style_form.css">
+    <link rel="stylesheet" href="/css_/style_navbar.css">
+    <link rel="stylesheet" href="/css_/style_gov+images.css">
+    <link rel="stylesheet" href="/css_2/style_metrorex_dropdown.css">
+    <link rel="stylesheet" href="/css_/style_button_submit_form.css">
+    <link rel="stylesheet" href="/css_2/style_about_metrorex.css">
+    <link rel="stylesheet" href="/css_2/style_footer_icons.css">
+    <link rel="stylesheet" href="/css_4/style_about_scroll.css">
+    <link rel="stylesheet" href="/css_/style_about_info_pass0.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script type="module" src="/script_java/login.js"></script>
+    <title>Metrorex S.A</title>
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-links">
+            <a href="/auth-html/inregistrare.html">Inregistrare</a>
+            <a href="/index.html">Autentificare</a>
+            <div class="language-container">
+                <a href="#" class="language-toggle">Limba</a>
+                <div class="language-options">
+                    <a href="#">English</a>
+                    <a href="#">Română</a>
+                    <a href="#">Español</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    
+    
+    <section class="main-container">
+       <div class="metro_default_image" >
+        <img src="./poze/metrou-back.jpg" alt="Metrorex S.A Image">
+       </div>
+            <div class="images_next_to_form">
+                <section class="GOV">
+                    <div class="intro-text">
+                        <h1>Metrorex</h1>
+                        <p>Portal online de reîncărcare carduri contactless</p>
+                    </div>
+                    <div class="image-item large">
+                        <img src="./poze-gov/gov_logo.png" alt="Image 1">
+                    </div>
+                    <div class="image-item small">
+                        <img src="./poze-gov/and_logo.png" alt="Image 2">
+                    </div>
+                    <div class="image-item large">
+                        <img src="./poze-gov/metro_logo.png" alt="Image 3">
+                    </div>
+                </section>
+
+                <section class="login-section">
+                    <form id="login-form" action="/user-panel/user.html" method="post" id="login-form">
+                        <div class="login-header">
+                            <div class="text-container">
+                                <h2>LOGIN</h2> 
+                                <figcaption>Metrorex S.A</figcaption>
+                            </div>
+                            <img src="./poze-gov/metro_sign_white.png" class="login-icon" alt="Metro Sign">
+                        </div>
+                        <label for="email">Email/Username:<span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                        <label for="password">Password: <span class="required">*</span></label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <div class="button-container">
+                            <button type="submit"><span>Login</span></button>
+                        </div>
+                    </form>
+                </section>
+                
+            </div>
+    </section>
+    
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-column">
+                <h2>Despre Metrorex</h2>
+                <ul>
+                    <li>Conducere</li>
+                    <li>Programe și strategii</li>
+                    <li>Rapoarte și studii</li>
+                    <li>Proiecte derulate în cadrul Metrorex</li>
+                </ul>
+            </div>
+            <div class="info-column">
+                <h2>Servicii</h2>
+                <ul>
+                    <li>Programe de circulație</li>
+                    <li>Titluri de călătorie</li>
+                    <li>Reguli de călătorie cu metroul</li>
+                    <li>Puncte de vânzare a titlurilor de călătorie</li>
+                    <li>Tratare cazuri funcționare defectuoasă carduri / cartele magnetice</li>
+                </ul>
+            </div>
+            <div class="info-column">
+                <h2>Interes public</h2>
+                <ul>
+                    <li>Solicitare informații. Legislatie</li>
+                    <li>Bugetul de venituri și cheltuieli</li>
+                    <li>Întrebări și răspunsuri prestabilite</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <section class="footer_icons">
+            <a  class="footer-icon" aria-label="American-Express"><img src="/poze-icons/american-express.png" alt="American-Express"></a>
+            <a  class="footer-icon" aria-label="Amex"><img src="/poze-icons/amex.png" alt="Amex"></a>
+            <a  class="footer-icon" aria-label="Apple-Pay"><img src="/poze-icons/apple-pay.png" alt="Apple-Pay"></a>
+            <a  class="footer-icon" aria-label="Maestro"><img src="/poze-icons/maestro.png" alt="Maestro"></a>
+            <a  class="footer-icon" aria-label="MasterCard"><img src="/poze-icons/master-card.png" alt="MasterCard"></a>
+            <a  class="footer-icon" aria-label="Paypal"><img src="/poze-icons/paypal.png" alt="Paypal"></a>
+            <a  class="footer-icon" aria-label="Stripe"><img src="/poze-icons/stripe.png" alt="Stripe"></a>
+            <a  class="footer-icon" aria-label="Visa"><img src="/poze-icons/visa.png" alt="Visa"></a>
+        </section>
+    </footer>
+    <script src="/script_java/script_java_dropdown.js"></script>
+    <script src="/script_java/script_java_language_dropdown.js"></script>
+</body>
+</html>
