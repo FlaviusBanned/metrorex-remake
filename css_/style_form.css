@@ -1,20 +1,19 @@
+/* General Styling for the Login Section */
 .login-section {
-    position: absolute; /* Positioning the section absolutely */
-    top: 20%; /* Push the section down */
-    left: 0;
-    right: 0;
-    bottom: auto; /* No constraint from the bottom */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, -30%); /* Centering the form */
+    width: 90%;
     max-width: 400px; /* Max width for the form */
     background: rgba(249, 249, 249, 0.8); /* Slightly transparent background */
     padding: 20px;
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    height: 400px; /* Set maximum height */
     box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
     color: #333; /* Text color for better contrast */
     z-index: 2; /* Ensure it is above other content */
-    margin: auto; /* Center horizontally */
-    transform: translateY(-20%); /* Slightly move the section up */
+    overflow-x: hidden; /* Prevent content overflow */
 }
 
 /* Login Header Styling */
@@ -22,27 +21,30 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Ensure items wrap in small screens */
 }
 
 .text-container {
     flex: 1;
+    min-width: 0; /* Prevent overflow */
 }
 
 .text-container h2 {
     margin: 0;
     font-size: 24px;
-    color: #333; /* Text color */
+    color: #333;
 }
 
 .text-container figcaption {
     font-size: 16px;
-    color: #555; /* Text color for the caption */
+    color: #555;
 }
 
 .login-icon {
     width: 100px; /* Icon size */
     height: auto;
     margin-left: 20px;
+    flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 /* Form Styling */
@@ -53,7 +55,7 @@
 }
 
 .login-form label {
-    margin-bottom: -15px;
+    margin-bottom: 5px; /* Adjusted spacing for better layout */
     font-weight: bold;
 }
 
@@ -76,12 +78,10 @@
     color: red; /* Color for required asterisk */
 }
 
-
-
 /* Adjustments for smaller screens */
 @media (max-width: 600px) {
     .login-header .text-container {
-        margin-right: 0; /* Remove right margin for small screens */
+        margin-right: 0;
         margin-bottom: 5px; /* Space between text and icon */
     }
 

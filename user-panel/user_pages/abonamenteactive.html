@@ -12,14 +12,14 @@
         <a href="/user-panel/user_pages/abonamenteactive.html" class="sidebar-btn">Abonamente active</a>
         <a href="/user-panel/user_pages/istoricabonamente.html" class="sidebar-btn">Istoric</a>
         <a href="/user-panel/user_pages/setariclienti.html" class="sidebar-btn">Setari</a>
-        <button class="close-btn" id="hide-btn">Hide Sidebar</button>
     </aside>
-    <button class="show-btn" id="show-btn">Show Sidebar</button>
+
+    <div class="arrow" id="toggle-arrow">🚇</div>
+
     <main class="main-content" id="main-content">
-        <!-- Welcome message -->
+      
         <p>Welcome to the main content area!</p>
-    
-        <!-- Purchase Section -->
+
         <section id="purchase-section">
             <h2>Purchase Metrorex Abonament</h2>
             <form id="purchase-form">
@@ -39,14 +39,14 @@
                     <option value="donor">Abonament lunar donatori de sânge – 40 RON</option>
                     <option value="elevi">Abonament lunar pentru elevi – gratuit</option>
                 </select>
-        
+
                 <label for="start-date">Start Date:</label>
                 <input type="date" id="start-date" name="start-date" required>
-        
+
                 <button type="submit">Purchase</button>
             </form>
         </section>
-        <!-- Paid Subscriptions Table -->
+        
         <section id="subscriptions-section">
             <h2>Your Paid Subscriptions</h2>
             <table id="subscriptions-table">
@@ -59,11 +59,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Paid subscriptions will appear here -->
+                    
                 </tbody>
             </table>
         </section>
     </main>
+
     <script src="/script_java_user_panel/aside_hide_show.js"></script>
 </body>
 </html>

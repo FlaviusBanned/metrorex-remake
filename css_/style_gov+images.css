@@ -35,8 +35,8 @@
 
 /* Specific sizes for each image while maintaining aspect ratio */
 .image-item.large img {
-    max-width: 300px; /* Larger size for the first and third images */
-    max-height: 300px; /* Larger size for the first and third images */
+    max-width: 220px; /* Larger size for the first and third images */
+    max-height: 220px; /* Larger size for the first and third images */
 }
 
 .image-item.small img {
