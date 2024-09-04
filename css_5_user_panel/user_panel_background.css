@@ -27,4 +27,5 @@ body::before {
     font-size: 14px; /* Font size for the error message */
     margin-top: 5px; /* Space above the error message */
     font-style: italic; /* Italicize the error message for emphasis */
+    font-weight: 900;
 }

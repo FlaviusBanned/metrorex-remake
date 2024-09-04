@@ -4,83 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile</title>
-    <link rel="stylesheet" href="/css_5_user_panel/edit_profile.css">
     <link rel="stylesheet" href="/css_5_user_panel/style_aside_bar.css">
+    <link rel="stylesheet" href="/css6_user_pages/abonamente_active_main.css">
     <link rel="stylesheet" href="/css_5_user_panel/user_panel_background.css">
-    <style>
-        .form-group {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        .form-group label {
-            flex: 1;
-        }
-        .form-group input {
-            flex: 2;
-            margin-right: 10px;
-        }
-        .form-group button {
-            flex: 1;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="/css6_user_pages/ab_active_form.css">
+    <link rel="stylesheet" href="/css6_user_pages/ab_active_form_purchase.css">
 </head>
 <body>
+    <style>
+        .form-divider {
+    border: none; /* Remove default border */
+    height: 1px; /* Height of the line */
+    background: linear-gradient(to right, rgba(0, 123, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(0, 123, 255, 0) 100%); /* Gradient effect */
+    margin: 0; /* Remove default margin */
+    margin-bottom: 30px; /* Space between the line and form control */
+    width: 100%; /* Full width of its container */
+}
+
+    </style>
     <aside class="sidebar hidden" id="sidebar">
         <a href="/user-panel/user_pages/abonamenteactive.html" class="sidebar-btn">Abonamente active</a>
         <a href="/user-panel/user_pages/istoricabonamente.html" class="sidebar-btn">Istoric</a>
         <a href="/user-panel/user_pages/setariclienti.html" class="sidebar-btn">Setari</a>
+        <a href="/index.html" class="sidebar-btn logout-btn">Log Out</a>
     </aside>
 
     <div class="arrow" id="toggle-arrow">🚇</div>
 
-    <main class="main-content">
-        <h2>Edit Your Profile</h2>
 
+    <main class="main-content" id="main-content">
+        <h2>Edit Your Profile</h2>
+        <hr class="form-divider">
         <div id="profile-info">
-            <div class="form-group">
+            <div class="form-control">
                 <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" name="first_name" pattern="[A-Za-z]+" title="Please enter a valid first name"  required>
+                <input type="text" id="first-name" name="first_name" pattern="[A-Za-z]+" title="Please enter a valid first name" required>
             </div>
 
-            <div class="form-group">
+            <div class="form-control">
                 <label for="last-name">Last Name:</label>
                 <input type="text" id="last-name" name="last_name" pattern="[A-Za-z]+" title="Please enter a valid last name" required>
             </div>
             
-            <div class="form-group">
+            <div class="form-control">
                 <label for="cnp">CNP:</label>
                 <input type="text" id="cnp" name="cnp" pattern="\d{13}" title="CNP must be 13 digits long" required>
                 <div class="error-message">CNP cannot be changed. If you encounter any issues, please contact us via email.</div>
             </div>
             
-            <div class="form-group">
+            <div class="form-control">
                 <label for="bdate">Date of Birth:</label>
                 <input type="date" id="bdate" name="bdate" required>
                 <div class="error-message">Date of Birth cannot be changed. If you encounter any issues, please contact us via email.</div>
             </div>
             
-            <div class="form-group">
+            <div class="form-control">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._]+@(yahoo\.com|gmail\.com|outlook\.com)" title="Please enter a valid email address" required>
             </div>
 
-            <div class="form-group">
+            <div class="form-control">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{7,}" title="Password must be at least 7 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character."required>
+                <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{7,}" title="Password must be at least 7 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character." required>
             </div>
 
-            <div class="button-container">
-                <button type="submit"><span>Save Changes</span></button>
-            </div>
+            <button type="button" class="button-container">
+                <span>Save changes</span>
+            </button>
         </div>
     </main>
-
-    <script src="/script_java_user_panel/aside_hide_show.js"></script>
+    
     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js"></script>
-
+    <script src="/script_java_user_panel/aside_hide_show.js"></script>
     <script>
         // Add your Firebase project configuration
         const firebaseConfig = {

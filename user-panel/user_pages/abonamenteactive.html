@@ -3,52 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semantic Sidebar Example</title>
+    <title>Abonamente active</title>
     <link rel="stylesheet" href="/css_5_user_panel/style_aside_bar.css">
     <link rel="stylesheet" href="/css_5_user_panel/user_panel_background.css">
+    <link rel="stylesheet" href="/css6_user_pages/abonamente_active_main.css">
+    <link rel="stylesheet" href="/css6_user_pages/ab_active_form_purchase.css">
+    <link rel="stylesheet" href="/css6_user_pages/ab_active_form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 </head>
 <body>
     <aside class="sidebar hidden" id="sidebar">
         <a href="/user-panel/user_pages/abonamenteactive.html" class="sidebar-btn">Abonamente active</a>
         <a href="/user-panel/user_pages/istoricabonamente.html" class="sidebar-btn">Istoric</a>
         <a href="/user-panel/user_pages/setariclienti.html" class="sidebar-btn">Setari</a>
-    </aside>
+        <a href="/index.html" class="sidebar-btn logout-btn">Log Out</a>
+      </aside>
 
     <div class="arrow" id="toggle-arrow">🚇</div>
 
     <main class="main-content" id="main-content">
-      
-        <p>Welcome to the main content area!</p>
 
+        <!-- Section for Purchasing Metrorex Abonament -->
         <section id="purchase-section">
             <h2>Purchase Metrorex Abonament</h2>
+            <br>
+    
+            <!-- Purchase Form -->
             <form id="purchase-form">
-                <label for="subscription-type">Choose your subscription type:</label>
-                <select id="subscription-type" name="subscription-type" required>
-                    <option value="" disabled selected>Select an option</option>
-                    <option value="card-1">Card 1 călătorie – 3 RON</option>
-                    <option value="card-2">Card cu 2 călătorii – 6 RON</option>
-                    <option value="card-24">Card 24 de ore – 8 RON</option>
-                    <option value="card-72">Card 72 ore – 20 RON</option>
-                    <option value="card-10">Card 10 călătorii – 25 RON</option>
-                    <option value="weekly">Abonament săptămânal – 30 RON</option>
-                    <option value="monthly">Abonament lunar – 80 RON</option>
-                    <option value="biannual">Abonament bi-anual – 400 RON</option>
-                    <option value="annual">Abonament anual – 700 RON</option>
-                    <option value="student">Abonament lunar pentru studenți – 8 RON</option>
-                    <option value="donor">Abonament lunar donatori de sânge – 40 RON</option>
-                    <option value="elevi">Abonament lunar pentru elevi – gratuit</option>
-                </select>
+                <!-- Subscription Type Dropdown -->
+                <div class="form-control">
+                    <label for="subscription-type">Choose your subscription type:</label>
+                    <select id="subscription-type" name="subscription-type" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="card-1">Card 1 călătorie – 3 RON</option>
+                        <option value="card-2">Card cu 2 călătorii – 6 RON</option>
+                        <option value="card-24">Card 24 de ore – 8 RON</option>
+                        <option value="card-72">Card 72 ore – 20 RON</option>
+                        <option value="card-10">Card 10 călătorii – 25 RON</option>
+                        <option value="weekly">Abonament săptămânal – 30 RON</option>
+                        <option value="monthly">Abonament lunar – 80 RON</option>
+                        <option value="biannual">Abonament bi-anual – 400 RON</option>
+                        <option value="annual">Abonament anual – 700 RON</option>
+                        <option value="student">Abonament lunar pentru studenți – 8 RON</option>
+                        <option value="donor">Abonament lunar donatori de sânge – 40 RON</option>
+                        <option value="elevi">Abonament lunar pentru elevi – gratuit</option>
+                    </select>
+                </div>
+                <hr class="form-divider">
 
-                <label for="start-date">Start Date:</label>
-                <input type="date" id="start-date" name="start-date" required>
-
-                <button type="submit">Purchase</button>
+                <!-- Start Date Input -->
+                <div class="form-control">
+                    <label for="start-date">Start Date:</label>
+                    <input type="text" id="start-date" name="start-date"  placeholder="27/05/2024" required>
+                </div>
+                <hr class="form-divider">
+            
+                <button type="button" class="button-container">
+                    <span>Purchase</span>
+                </button>
+            
+                <br><br>
+            
             </form>
+            
         </section>
         
+        <br><br>
+    
+        <!-- Section for Displaying Paid Subscriptions -->
         <section id="subscriptions-section">
             <h2>Your Paid Subscriptions</h2>
+            <br>
+            <hr class="form-divider">
+            <!-- Subscriptions Table -->
             <table id="subscriptions-table">
                 <thead>
                     <tr>
@@ -59,12 +86,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    <!-- Content will be dynamically filled here -->
                 </tbody>
             </table>
         </section>
+    
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="/script_java_user_panel/aside_hide_show.js"></script>
+    <script src="/flatpick_java/includer_flatpick.js"></script>
 </body>
 </html>

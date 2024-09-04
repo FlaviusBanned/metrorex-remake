@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
     <link rel="stylesheet" href="/css_3(inregistrare)/style_default.css">
     <link rel="stylesheet" href="/css_3(inregistrare)/style_header(navbar).css">
     <link rel="stylesheet" href="/css_3(inregistrare)/style_form_inreg.css">
     <link rel="stylesheet" href="/css_3(inregistrare)/style_about_footer_signup.css">
     <link rel="stylesheet" href="/css_3(inregistrare)/style_about_info_pass.css">
+    <link rel="stylesheet" href="/css6_user_pages/ab_active_form.css">
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
@@ -40,10 +42,12 @@
             
             <label for="cnp">CNP:<span class="required">*</span></label>
             <input type="text" id="cnp" name="cnp" pattern="\d{13}" title="CNP must be 13 digits long" placeholder="6346995226362" required>
-            
+
+            <div class="form-control"> 
             <label for="bdate">Date of Birth:<span class="required">*</span></label>
-            <input type="date" id="bdate" name="bdate" required>
-            
+            <input type="date" id="bdate" name="bdate"  placeholder="yyyy-mm-dd" required>
+            </div>
+
             <label for="email">Email:<span class="required">*</span></label>
             <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._]+@(yahoo\.com|gmail\.com|outlook\.com)" title="Please enter a valid email address" placeholder="example@gmail.com" required>
             
@@ -105,5 +109,17 @@
             <a  class="footer-icon" aria-label="Visa"><img src="/poze-icons/visa.png" alt="Visa"></a>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function () {
+    flatpickr("#bdate", {
+        dateFormat: "Y-m-d",
+        minDate: "1950-01-01", 
+        maxDate: "today",    
+        allowInput: true       
+    });
+});
+    </script>
 </body>
 </html>

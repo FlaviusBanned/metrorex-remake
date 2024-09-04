@@ -18,7 +18,7 @@ body {
 .metro_default_image {
     position: relative; /* Establish a stacking context */
     width: 100vw; /* Full viewport width */
-    height: 140vh; /* Full viewport height */
+    height: 180vh; /* Full viewport height */
     margin: 0; /* Remove margins */
     padding: 0; /* Remove padding */
     overflow: hidden; /* Hide any overflow */
