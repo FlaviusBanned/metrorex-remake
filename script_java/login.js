@@ -32,7 +32,7 @@ function login() {
         .then(() => {
             // User signed in successfully
             alert("Login successful!");
-            window.location.href = "./user-panel/user.html"; // Redirect to user panel or success page
+            window.location.href = "./user-panel/user_pages/abonamenteactive.html"; // Redirect to user panel or success page
         })
         .catch((error) => {
             // Handle errors
