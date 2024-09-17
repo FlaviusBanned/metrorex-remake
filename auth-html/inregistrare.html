@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> | Metrorex S.A</title>
+
+    <link rel="preconnect" href="https://www.gstatic.com">
+
+    <link rel="icon" href="/poze-icons/metro_icon.png" type="image/x-icon"> 
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
     <link rel="stylesheet" href="/css_3(inregistrare)/style_default.css">
     <link rel="stylesheet" href="/css_3(inregistrare)/style_header(navbar).css">
@@ -10,11 +16,12 @@
     <link rel="stylesheet" href="/css_3(inregistrare)/style_about_footer_signup.css">
     <link rel="stylesheet" href="/css_3(inregistrare)/style_about_info_pass.css">
     <link rel="stylesheet" href="/css6_user_pages/ab_active_form.css">
+
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-    <script type="module" src="/script_java/register.js"></script>
-    <title>Metrorex S.A</title>
+    <script defer type="module" src="/script_java/register.js"></script>
+
 </head>
 <body>
     <header class="navbar">
@@ -35,10 +42,10 @@
                 <img src="/poze-gov/metro_sign_white.png" class="login-icon" alt="Metro Sign">
             </div>
             <label for="first-name">First Name:<span class="required">*</span></label>
-            <input type="text" id="first-name" name="first_name" pattern="[A-Za-z]+" title="Please enter a valid first name" placeholder="John" required>
+            <input type="text" id="first-name" name="first_name" pattern="[A-Za-z]+" title="Please enter a valid first name" placeholder="Popa" required>
             
             <label for="last-name">Last Name:<span class="required">*</span></label>
-            <input type="text" id="last-name" name="last_name" pattern="[A-Za-z]+" title="Please enter a valid last name" placeholder="Doe" required>
+            <input type="text" id="last-name" name="last_name" pattern="[A-Za-z]+" title="Please enter a valid last name" placeholder="Andreea" required>
             
             <label for="cnp">CNP:<span class="required">*</span></label>
             <input type="text" id="cnp" name="cnp" pattern="\d{13}" title="CNP must be 13 digits long" placeholder="6346995226362" required>
@@ -49,7 +56,7 @@
             </div>
 
             <label for="email">Email:<span class="required">*</span></label>
-            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._]+@(yahoo\.com|gmail\.com|outlook\.com)" title="Please enter a valid email address" placeholder="example@gmail.com" required>
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._]+@(yahoo\.com|gmail\.com|outlook\.com)" title="Please enter a valid email address" placeholder="popaandreea44@gmail.com" required>
             
             <label for="password">Password: <span class="required">*</span></label>
             <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{7,}" title="Password must be at least 7 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character." placeholder="Enter your password" required>
@@ -58,7 +65,7 @@
             <input type="password" id="re-type_password" name="re-type_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{7,}" title="Password must be at least 7 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character." placeholder="Re-enter your password" required>
             
             <div class="button-container">
-                <button type="submit"><span>Register</span></button>
+                <a href="#" id="submit_link"><span>Register</span></a>
             </div>
         </form>
     </section>

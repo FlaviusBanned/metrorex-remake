@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abonamente active</title>
+    <title> | Abonamente active </title>
+    <link rel="icon" href="/poze-icons/metro_icon.png" type="image/x-icon"> 
     <link rel="stylesheet" href="/css_5_user_panel/style_aside_bar.css">
     <link rel="stylesheet" href="/css_5_user_panel/user_panel_background.css">
     <link rel="stylesheet" href="/css6_user_pages/abonamente_active_main.css">
-    <link rel="stylesheet" href="/css6_user_pages/ab_active_form_purchase.css">
+    <link rel="stylesheet" href="/css8_common_button_user_pages/css8_button.css">
     <link rel="stylesheet" href="/css6_user_pages/ab_active_form.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 </head>
@@ -54,13 +55,13 @@
                 <!-- Start Date Input -->
                 <div class="form-control">
                     <label for="start-date">Start Date:</label>
-                    <input type="text" id="start-date" name="start-date"  placeholder="27/05/2024" required>
+                    <input type="text" id="start-date" name="start-date"  placeholder="yyyy-mm-dd" required>
                 </div>
                 <hr class="form-divider">
             
-                <button type="button" class="button-container">
-                    <span>Purchase</span>
-                </button>
+                <div class="button-container">
+                    <a href="#" id="purchase"><span>Purchase</span></a>
+                </div>
             
                 <br><br>
             
@@ -86,7 +87,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Content will be dynamically filled here -->
+                    
                 </tbody>
             </table>
         </section>

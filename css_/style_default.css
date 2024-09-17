@@ -20,7 +20,7 @@ body {
     width: 100%; /* Full width of the container */
     height: 100%; /* Full height of the container */
     object-fit: cover; /* Cover the container while maintaining aspect ratio */
-    opacity: 0.9; /* Adjust opacity for transparency */
+    opacity: 1; /* Adjust opacity for transparency */
     filter: blur(4px); /* Apply a blur effect */
 }
 

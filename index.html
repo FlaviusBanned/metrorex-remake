@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> | Metrorex S.A</title>
+
+    <link rel="preconnect" href="https://www.gstatic.com">
+
+    
+    <script async src="/script_java/script_java_dropdown.js"></script>
+    <script async src="/script_java/script_java_language_dropdown.js"></script>
+
+    <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script defer type="module" src="/script_java/login.js"></script>
+
+    <link rel="icon" href="/poze-icons/metro_icon.png" type="image/x-icon">
+    <link rel="preload" href="/css_/style_default.css" as="style">
     <link rel="stylesheet" href="/css_/style_default.css">
     <link rel="stylesheet" href="/css_/style_navbar.css">
     <link rel="stylesheet" href="/css_/style_button_submit_form.css">
-    <link rel="stylesheet" href="/css_2/style_about_metrorex.css">
     <link rel="stylesheet" href="/css_2/style_footer_icons.css">
     <link rel="stylesheet" href="/css_/style_about_info_pass0.css">
     <link rel="stylesheet" href="/css_/all_working_index.css">
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-    <script type="module" src="/script_java/login.js"></script>
-    <title>Metrorex S.A</title>
+
+    
 </head>
+
 <body>
     <header class="navbar">
         <nav class="nav-links">
@@ -31,54 +44,53 @@
             </div>
         </nav>
     </header>
-    
+
     <section class="main-container">
         <div class="metro_default_image">
-            <img src="./poze/metrou-back.jpg" alt="Metrorex S.A Image">
+            <img src="./poze/metrou-back.jpg" alt="Metrorex S.A Image" loading="lazy" width="600" height="400">
         </div>
-        
-        <div class="content-wrapper">
-           <section class="GOV">
-    <div class="intro-text">
-        <h1>Metrorex</h1>
-        <p>Portal online de reîncărcare carduri contactless</p>
-    </div>
-    <div class="image-container">
-        <div class="image-item large">
-            <img src="./poze-gov/gov_logo.png" alt="Image 1">
-        </div>
-        <div class="image-item small">
-            <img src="./poze-gov/and_logo.png" alt="Image 2">
-        </div>
-        <div class="image-item large">
-            <img src="./poze-gov/metro_logo.png" alt="Image 3">
-        </div>
-    </div>
-</section>
 
-            
+        <div class="content-wrapper">
+            <section class="GOV">
+                <div class="intro-text">
+                    <h1>Metrorex</h1>
+                    <p>Portal online de reîncărcare carduri contactless</p>
+                </div>
+                <div class="image-container">
+                    <div class="image-item large">
+                        <img src="./poze-gov/gov_logo.png" alt="Gov Logo" loading="lazy" width="200" height="100">
+                    </div>
+                    <div class="image-item small">
+                        <img src="./poze-gov/and_logo.png" alt="AND Logo" loading="lazy" width="100" height="100">
+                    </div>
+                    <div class="image-item large">
+                        <img src="./poze-gov/metro_logo.png" alt="Metro Logo" loading="lazy" width="200" height="100">
+                    </div>
+                </div>
+            </section>
+
             <section class="login-section">
                 <form class="login-form" action="/user-panel/user_pages/abonamenteactive.html" method="post" id="login-form">
                     <div class="login-header">
                         <div class="text-container">
-                            <h2>LOGIN</h2> 
+                            <h2>LOGIN</h2>
                             <figcaption>Metrorex S.A</figcaption>
                         </div>
-                        <img src="./poze-gov/metro_sign_white.png" class="login-icon" alt="Metro Sign">
+                        <img src="./poze-gov/metro_sign_white.png" class="login-icon" alt="Metro Sign" loading="lazy" width="50" height="50">
                     </div>
                     <label for="email">Email/Username:<span class="required">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-                    <label for="password">Password: <span class="required">*</span></label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <input type="email" id="email" name="email"  required>
+                    <label for="password">Password:<span class="required">*</span></label>
+                    <input type="password" id="password" name="password"  required>
                     <a href="/forgot-password_html/forgot_password.html" style="color: rgb(0, 0, 0); text-decoration: underline; font-size: 12px;">Forgot Password</a>
                     <div class="button-container">
-                        <button type="submit"><span>Login</span></button>
+                        <a href="#" id="submit_link"><span>Log in</span></a>
                     </div>
                 </form>
             </section>
         </div>
     </section>
-    
+
     <section class="info-section">
         <div class="info-container">
             <div class="info-column">
@@ -110,21 +122,19 @@
             </div>
         </div>
     </section>
-    
+
     <footer class="footer">
         <section class="footer_icons">
-            <a class="footer-icon" aria-label="American-Express"><img src="/poze-icons/american-express.png" alt="American-Express"></a>
-            <a class="footer-icon" aria-label="Amex"><img src="/poze-icons/amex.png" alt="Amex"></a>
-            <a class="footer-icon" aria-label="Apple-Pay"><img src="/poze-icons/apple-pay.png" alt="Apple-Pay"></a>
-            <a class="footer-icon" aria-label="Maestro"><img src="/poze-icons/maestro.png" alt="Maestro"></a>
-            <a class="footer-icon" aria-label="MasterCard"><img src="/poze-icons/master-card.png" alt="MasterCard"></a>
-            <a class="footer-icon" aria-label="Paypal"><img src="/poze-icons/paypal.png" alt="Paypal"></a>
-            <a class="footer-icon" aria-label="Stripe"><img src="/poze-icons/stripe.png" alt="Stripe"></a>
-            <a class="footer-icon" aria-label="Visa"><img src="/poze-icons/visa.png" alt="Visa"></a>
+            <a class="footer-icon" aria-label="American-Express"><img src="/poze-icons/american-express.png" alt="American-Express" loading="lazy" width="50" height="50"></a>
+            <a class="footer-icon" aria-label="Amex"><img src="/poze-icons/amex.png" alt="Amex" loading="lazy" width="50" height="50"></a>
+            <a class="footer-icon" aria-label="Apple-Pay"><img src="/poze-icons/apple-pay.png" alt="Apple-Pay" loading="lazy" width="50" height="50"></a>
+            <a class="footer-icon" aria-label="Maestro"><img src="/poze-icons/maestro.png" alt="Maestro" loading="lazy" width="50" height="50"></a>
+            <a class="footer-icon" aria-label="MasterCard"><img src="/poze-icons/master-card.png" alt="MasterCard" loading="lazy" width="50" height="50"></a>
+            <a class="footer-icon" aria-label="Paypal"><img src="/poze-icons/paypal.png" alt="Paypal" loading="lazy" width="50" height="50"></a>
+            <a class="footer-icon" aria-label="Stripe"><img src="/poze-icons/stripe.png" alt="Stripe" loading="lazy" width="50" height="50"></a>
+            <a class="footer-icon" aria-label="Visa"><img src="/poze-icons/visa.png" alt="Visa" loading="lazy" width="50" height="50"></a>
         </section>
     </footer>
-    
-    <script src="/script_java/script_java_dropdown.js"></script>
-    <script src="/script_java/script_java_language_dropdown.js"></script>
 </body>
+
 </html>

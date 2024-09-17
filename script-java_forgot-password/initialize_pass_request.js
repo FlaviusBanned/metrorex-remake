@@ -22,18 +22,28 @@ const auth = getAuth(app);
 function showPopup(message) {
   const popup = document.getElementById('message-popup');
   const popupMessage = document.getElementById('popup-message');
-  popupMessage.textContent = message; // Set message
-  popup.classList.add('show'); // Show popup
 
-  // Hide popup after 3 seconds
+  // Remove existing message
+  popupMessage.textContent = '';
+  
+  // Reset visibility
+  popup.classList.remove('show');
+  
+  // Set new message
+  popupMessage.textContent = message;
+  
+  // Show popup
+  popup.classList.add('show');
+
+  // Hide popup after 2 seconds
   setTimeout(() => {
      popup.classList.remove('show');
-  }, 3000); // 3000 milliseconds = 3 seconds
+  }, 2000); // 2000 milliseconds = 2 seconds
 }
 
-// Replace alert with showPopup in the form submission
-document.getElementById('forgot-password-form').addEventListener('submit', async (event) => {
-  event.preventDefault(); // Prevent form submission from reloading the page
+// Update event listener to handle anchor click
+document.getElementById('submit_link').addEventListener('click', async (event) => {
+  event.preventDefault(); // Prevent default anchor behavior
   const email = document.getElementById('email').value; // Get user input email
 
   try {

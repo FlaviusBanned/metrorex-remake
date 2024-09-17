@@ -1,61 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/poze-icons/metro_icon.png" type="image/x-icon"> 
-    <title> | Registration Successful </title>
-    <link rel="stylesheet" href="/css_3(inregistrare)/style_default.css"> 
-    <link rel="stylesheet" href="/css_5_user_panel/user_panel_background.css"><!-- Optional: Link your styles -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding:10px;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #ddd;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* White shadow */
-            backdrop-filter: blur(10px);
-            border-radius: 8px;
-            width:400px;
-            max-width:90%;
-        }
-
-        h1 {font-size: 1.8rem;
-            color: #28a745;
-            text-shadow: 
-                1px 1px 0 #000,  
-                -1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000; /* Creates a border effect around the text */
-        }
-        p {
-            color: #ffffff;
-            font-size: 1 rem;
-        }
-
-        /* Button Styling */
-        .button-container {
+.button-container {
             margin-top: 20px;
             font-family: 'Arial', sans-serif;
             font-size: 13px;
             font-weight: bold;
-            padding: 25px 55px; 
+            padding: 20px 55px; 
             border: none;
             cursor: pointer;
             outline: none;
             border-radius: 10px; /* Increased border-radius */
             position: relative;
             overflow: hidden;
-            background: linear-gradient(to right, #ffffff -5%, #048d04 20%, #048d04 10%, #ffffff 50%);
+            background: linear-gradient(to right, #ffffff -5%, #006aff 10%, #006aff 10%, #ffffff 50%);
             background-size: 100% 100%;
             background-position: right bottom;
             transition: background-position 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
@@ -132,62 +87,3 @@
             color: aliceblue; /* Change color on hover */
         }
        
-        @media(max-width:768px){
-        .container{
-            width: 80%;
-            padding:15px;
-        }
-        h1 {
-            font-size: 1.5rem;
-        }
-
-        p {
-            font-size: 0.9rem;
-        }
-
-        .button-container {
-            font-size: 12px;
-            padding: 5px;
-        }
-
-        .button-container a {
-            padding: 6px 10px;
-            font-size: 12px;
-        }
-    }
-    @media (max-width: 480px) {
-        .container {
-            width: 100%; 
-            padding: 10px;
-        }
-
-        h1 {
-            font-size: 1.2rem;
-        }
-
-        p {
-            font-size: 0.8rem;
-        }
-
-        .button-container {
-            font-size: 11px;
-            padding: 5px;
-        }
-
-        .button-container a {
-            padding: 5px 8px;
-            font-size: 11px;
-        }
-    }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Registration Successful!</h1>
-        <p>Thank you for registering. Your account has been created.</p>
-        <div class="button-container">
-            <a href="/index.html"><span>Go to Login</span></a>
-        </div>
-    </div>
-</body>
-</html>

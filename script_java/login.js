@@ -51,7 +51,7 @@ function validatePassword(password) {
 }
 
 // Event listener for the form
-document.getElementById('login-form').addEventListener('submit', (event) => {
+document.getElementById('submit_link').addEventListener('click', async (event) => {
     event.preventDefault();
     login();
 });
